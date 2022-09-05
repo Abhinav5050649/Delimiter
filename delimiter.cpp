@@ -5,6 +5,7 @@ int greeting();
 vector<string> acceptFileNamesFromUser(int nOfFiles);
 string readTextFromFiles();
 void parentheses_check(string textInput);
+void closing_remarks();
 
 int main()
 {
@@ -32,6 +33,8 @@ int main()
         file.close();
     }
     
+    closing_remarks();
+
     return 0;
 }
 
@@ -97,5 +100,13 @@ void parentheses_check(string textInput)
             cout << p.first << " found unpaired. Character count of << " << p.first << " is: " << p.second << endl;
         }
     }
+    return;
+}
+
+void closing_remarks()
+{
+    cout << "\t \t Thank you for using the Delimiter Project! \t \t" << endl;
+    cout << "\t \t Exiting program... \t \t" << endl;
+
     return;
 }
