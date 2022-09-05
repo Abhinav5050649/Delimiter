@@ -43,8 +43,9 @@ int greeting()
     cout << "\t \t Welcome to the Delimiter Checking Program! \t \t" << endl;
 
     cout << "\t \t Enter number of files to check: ";
-    cout << endl << endl << endl;
     int numberOfFilesToCheck = 0; cin >> numberOfFilesToCheck;
+
+    cout << endl << endl << endl;
     return numberOfFilesToCheck;
 }
 
