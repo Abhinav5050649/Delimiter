@@ -43,6 +43,7 @@ int greeting()
     cout << "\t \t Welcome to the Delimiter Checking Program! \t \t" << endl;
 
     cout << "\t \t Enter number of files to check: ";
+    cout << endl << endl << endl;
     int numberOfFilesToCheck = 0; cin >> numberOfFilesToCheck;
     return numberOfFilesToCheck;
 }
@@ -100,6 +101,8 @@ void parentheses_check(string textInput)
             cout << p.first << " found unpaired. Character count of << " << p.first << " is: " << p.second << endl;
         }
     }
+
+    cout << endl << endl << endl;
     return;
 }
 
