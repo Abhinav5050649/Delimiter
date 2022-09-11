@@ -67,7 +67,7 @@ void parentheses_check(string textInput)
 {
     int lenOfInputText = textInput.length();
     stack<pair<char, int>> s;
-
+    int ln_Number = 0;
     for (int i = 0; i < lenOfInputText; ++i)
     {
         char ch = textInput[i];
@@ -76,16 +76,41 @@ void parentheses_check(string textInput)
             case '{':
             case '(':
             case '[':
-                s.push({ch, i});
+                s.push({ch, ln_Number});
                 break;
             case ')':
-                s.pop();
-                break;
+                if (s.top() == '(')
+                {
+                    s.pop();
+                    break;
+                }
+                else{
+                    cout << ch << " is odd character at line number " << ln_Number<< endl;
+                    break;
+                }
             case '}':
-                s.pop();
-                break;
+                if (s.top() == '{')
+                {
+                    s.pop();
+                    break;
+                }
+                else{
+                    cout << ch << " is odd character at line number " << ln_Number << endl;
+                    break;
+                }
             case ']':
-                s.pop();
+                if (s.top() == '[')
+                {
+                    s.pop();
+                    break;
+                }
+                else{
+                    cout << ch << " is odd character at line number " << ln_Number << endl;
+                    break;
+                }
+            
+            case '\n':
+                ln_Number++;
                 break;
             default:
                 break;
@@ -99,7 +124,7 @@ void parentheses_check(string textInput)
         {
             pair<char, int> p = s.top();
             s.pop();
-            cout << p.first << " found unpaired. Character count of << " << p.first << " is: " << p.second << endl;
+            cout << p.first << " found unpaired. Line count of << " << p.first << " is: " << p.second << endl;
         }
     }
 
