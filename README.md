@@ -2,8 +2,7 @@
 
 ## Languages Used
 
-C and C++
-(Currently only in C++)
+C++ Only
 
 ## Overall Aim
 
